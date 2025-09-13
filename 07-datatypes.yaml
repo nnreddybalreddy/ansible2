@@ -1,16 +1,16 @@
-- name: datatypes
-  hosts: web
-  become: yes
+- name: datatype 
+  hosts: web 
+  become: yes 
   vars:
-    Course: "Docker"
-    list1:
-    - Docker1
-    - Kubs1
+    Course: "DOcker"
+    list1: 
+    - docker 
+    - kubs 
     dict1:
-      trainer: "NNR"
-      course: "NNR1"
-    realproject: True  
-  tasks:
-  - name: datatypes 
+      trainer: "NNR8"
+      course: "NNR10"
+    proj: True  
+  tasks: 
+  - name: datatype 
     ansible.builtin.debug:
-      msg:"{{Course}} {{list1}} {{dict1}} {{realproject}}"
+      msg: "{{Course}} {{list1}} {{dict1}} {{proj}}"

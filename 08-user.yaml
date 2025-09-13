@@ -1,19 +1,13 @@
-- name: user
+- name: loops
   hosts: web
   become: yes
-  tasks:
-  - name: user
-    ansible.builtin.command: id expense1
-    ignore_errors: true
-    register: USER
-
-  - name: print info
+  tasks: 
+  - name: loops
     ansible.builtin.debug:
-      msg: "{{USER}}"  
-
-  - name: id expense
-    ansible.builtin.command: useradd expense1
-    when: USER.rc!=0
+      msg: "{{item}}"
+    loop:
+    - mysql
+    - git  
 
 
       

@@ -6,7 +6,14 @@
     ansible.builtin.command: useradd expense
     ignore_errors: true
     register: USER
-    
+
   - name: print info
     ansible.builtin.debug:
       msg: "{{USER}}"  
+
+  - name: id expense
+    ansible.builtin.command: id expense
+    when: USER.rc!=0
+
+    
+      

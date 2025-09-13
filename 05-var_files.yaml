@@ -3,10 +3,10 @@
   become: yes
   # vars_files:
   #   vars.yaml
-  vars_prompt:
-    name: Course
-    prompt: "Pls enter" 
-    private: no 
+  # vars_prompt:
+  #   name: Course
+  #   prompt: "Pls enter" 
+  #   private: no 
   tasks:
   - name: files
     ansible.builtin.debug:

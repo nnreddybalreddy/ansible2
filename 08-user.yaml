@@ -1,0 +1,12 @@
+- name: user
+  hosts: web
+  become: yes
+  tasks:
+  - name: user
+    ansible.builtin.command: useradd expense
+    ignore_errors: true
+    register: USER
+    
+  - name: print info
+    ansible.builtin.debug:
+      msg: "{{USER}}"  

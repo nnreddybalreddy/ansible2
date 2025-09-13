@@ -1,0 +1,17 @@
+- name: vars pref
+  hosts: web 
+  become: yes
+  vars:
+    WISHES: " Play level wishes"
+  vars_files:
+    vars.yaml 
+  vars_prompt:
+    name: WISHES 
+    prompt: "Pls enter"
+    private: no  
+  tasks:
+  - name: vars pref 
+    vars:
+      WISHES: "Task Level wishes"
+    ansible.builtin.debug:  
+      msg: "{{WISHES}}"  

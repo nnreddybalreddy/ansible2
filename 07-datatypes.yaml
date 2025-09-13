@@ -1,0 +1,16 @@
+- name: datatypes
+  hosts: web
+  become: yes
+  vars:
+    Course: "Docker"
+    lists:
+    - "Docker1"
+    - "Kubs1"
+    dict1:
+      trainer: "NNR"
+      course: "NNR1"
+    realproject: True  
+  tasks:
+  - name: datatypes 
+    ansible.builtin.debug:
+      msg:"{{Course}} {{lists}} {{dict1}} {{realproject}}"

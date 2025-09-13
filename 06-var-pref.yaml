@@ -5,10 +5,10 @@
     WISHES: " Play level wishes"
   vars_files:
     vars.yaml 
-  vars_prompt:
-    name: WISHES 
-    prompt: "Pls enter"
-    private: no  
+  # vars_prompt:
+  #   name: WISHES 
+  #   prompt: "Pls enter"
+  #   private: no  
   tasks:
   - name: vars pref 
     vars:

@@ -4,8 +4,8 @@
   vars:
     Course: "Docker"
     list1:
-    - "Docker1"
-    - "Kubs1"
+    - Docker1
+    - Kubs1
     dict1:
       trainer: "NNR"
       course: "NNR1"

@@ -1,0 +1,23 @@
+- name: Play 1
+  hosts: web
+  become: yes
+  tasks:
+  - name: Play 1 task 1
+    ansible.builtin.debug:
+      msg: "Play 1 and Task 1"
+  - name: Play 1 Task 2
+    ansible.builtin.debug:
+      msg: "Play 1 and Task 2"
+
+- name: Play 2 
+  hosts: web
+  become: yes
+  tasks:
+  - name: Play 2 and Task 1
+    ansible.builtin.debug:
+      msg: "Play 2 and Task 1"
+  - name: Play 2 and Task 2
+    ansible.builtin.debug:
+      msg: "Play 2 and Task 2"
+
+   

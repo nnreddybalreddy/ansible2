@@ -3,7 +3,7 @@
   become: yes
   vars:
     Course: "Docker"
-    lists:
+    list1:
     - "Docker1"
     - "Kubs1"
     dict1:
@@ -13,4 +13,4 @@
   tasks:
   - name: datatypes 
     ansible.builtin.debug:
-      msg:"{{Course}} {{lists}} {{dict1}} {{realproject}}"
+      msg:"{{Course}} {{list1}} {{dict1}} {{realproject}}"

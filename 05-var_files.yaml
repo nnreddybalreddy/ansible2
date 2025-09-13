@@ -1,0 +1,9 @@
+- name: files
+  hosts: web
+  become: yes
+  vars_files:
+    vars.yaml
+  tasks:
+  - name: files
+    ansible.builtin.debug:
+      msg: "{{Course}}"

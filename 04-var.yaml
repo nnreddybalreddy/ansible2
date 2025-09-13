@@ -1,0 +1,9 @@
+- name: variables
+  hosts: web
+  become: yes
+  vars:
+    Course: "Docker"
+  tasks:
+  - name: variables
+    ansible.builtin.debug:
+      msg: "{{Course}}"

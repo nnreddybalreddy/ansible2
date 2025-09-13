@@ -5,5 +5,7 @@
     Course: "Docker"
   tasks:
   - name: variables
+    vars:
+      Course: "Kubs"
     ansible.builtin.debug:
       msg: "{{Course}}"
